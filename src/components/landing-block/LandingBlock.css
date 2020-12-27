@@ -1,0 +1,64 @@
+.mini-browser {
+    width: 50%;
+    height: 50vh;
+}
+
+#ring {
+  animation: simple-rotation 4s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes simple-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#picture {
+  animation: adjust-picture 2.5s ease infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes adjust-picture {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+#rulerX {
+  animation: enlargeX 2.5s ease infinite alternate;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes enlargeX {
+  from {
+    transform: scaleX(0.8);
+  }
+  to {
+    transform: scaleX(1.1);
+  }
+}
+
+#rulerY {
+  animation: enlargeY 2.5s ease infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes enlargeY {
+  from {
+    transform: scaleY(0.8);
+  }
+  to {
+    transform: scaleY(1.1);
+  }
+}
