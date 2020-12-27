@@ -1,9 +1,18 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import LandingBlock from "./components/LandingBlock";
+import StackBlock from "./components/StackBlock";
+import ProjectsBlock from "./components/ProjectsBlock";
+import FooterBlock from "./components/FooterBlock";
 
 function App() {
   return (
-   <div></div> 
+    <React.Fragment>
+      <LandingBlock />
+      <StackBlock />
+      <ProjectsBlock />
+      <FooterBlock />
+    </React.Fragment>
   );
 }
 

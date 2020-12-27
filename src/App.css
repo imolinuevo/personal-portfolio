@@ -1,0 +1,21 @@
+.main-block {
+  width: 100%;
+}
+
+.landing-block {
+  height: 100vh;
+}
+
+.stack-block {
+  background-color: #00bfa6;
+  height: 100vh;
+}
+
+.projects-block {
+  height: 100vh;
+}
+
+.footer-block {
+  background-color: #3f3d56;
+  height: 33vh;
+}
