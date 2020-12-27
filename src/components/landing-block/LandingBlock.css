@@ -1,6 +1,25 @@
-.mini-browser {
-    width: 50%;
-    height: 50vh;
+.mini-browser,
+.title-container {
+  width: 50%;
+  height: 50vh;
+}
+
+.title-container {
+    text-align: left;
+}
+
+@media screen and (max-width: 992px) {
+  .mini-browser,
+  .title-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mini-browser,
+  .title-container {
+    width: 90%;
+  }
 }
 
 #ring {
