@@ -5,10 +5,20 @@ import "./LandingBlock.css";
 const LandingBlock = () => {
   return (
     <div className="main-block landing-block">
-      <MiniBrowser className="mini-browser" />
       <div className="title-container">
-        <h1>Foo</h1>
+        <h1>
+          I'm <span>Iñigo</span> Molinuevo
+        </h1>
+        <p>
+          In my portfolio you can find information about my software stack and
+          personal projects.
+        </p>
+        <div>
+          <button>Browse stack</button>
+          <button>Browse projects</button>
+        </div>
       </div>
+      <MiniBrowser className="mini-browser" />
     </div>
   );
 };

@@ -1,25 +1,11 @@
 .mini-browser,
 .title-container {
-  width: 50%;
+  width: 45%;
   height: 50vh;
 }
 
 .title-container {
-    text-align: left;
-}
-
-@media screen and (max-width: 992px) {
-  .mini-browser,
-  .title-container {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .mini-browser,
-  .title-container {
-    width: 90%;
-  }
+  text-align: left;
 }
 
 #ring {
@@ -79,5 +65,50 @@
   }
   to {
     transform: scaleY(1.1);
+  }
+}
+
+.title-container * {
+  padding: 20px 0px;
+}
+
+.title-container h1 {
+  font-size: 4em;
+}
+
+.title-container h1 span {
+  color: #00bfa6;
+  background-color: transparent;
+}
+
+.title-container p {
+  font-weight: 200;
+}
+
+.title-container button {
+  padding: 1em 1.5em;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 1350px) {
+  .title-container h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .title-container h1 {
+    font-size: 2em;
+  }
+  .landing-block {
+    flex-direction: column-reverse;
+  }
+  .mini-browser,
+  .title-container {
+    width: 90%;
   }
 }
