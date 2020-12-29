@@ -163,6 +163,10 @@
   outline: none;
 }
 
+.title-container a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .title-container .button-container {
   display: flex;
 }
