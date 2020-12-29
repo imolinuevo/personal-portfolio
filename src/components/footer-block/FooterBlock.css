@@ -1,0 +1,16 @@
+.footer-block {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-block .footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 33vh;
+  width: 80%;
+}
+
+.footer-content p {
+  font-weight: 200;
+}
