@@ -6,7 +6,7 @@ import linkedinLogo from "./linkedin-logo.png";
 
 const LandingBlock = () => {
   return (
-    <div className="main-block landing-block">
+    <div className="main-block landing-block" id="landing">
       <div className="social-nav-bar">
         <a
           href="https://github.com/imolinuevo"
@@ -33,8 +33,12 @@ const LandingBlock = () => {
             personal projects.
           </p>
           <div className="button-container">
-            <button>Browse stack</button>
-            <button>Browse projects</button>
+            <a href="#stack">
+              <button>Browse stack</button>
+            </a>
+            <a href="#projects">
+              <button>Browse projects</button>
+            </a>
           </div>
         </div>
         <MiniBrowser className="mini-browser" />
