@@ -97,7 +97,7 @@ const techOptions: ITechContainer[] = [
     groupName: "Development tools",
     groupIcons: [
       {
-        title: "Visual Studio Code",
+        title: "VSCode",
         url: "https://code.visualstudio.com/",
       },
       {
@@ -117,7 +117,7 @@ const techOptions: ITechContainer[] = [
         url: "https://www.jenkins.io/",
       },
       {
-        title: "SonarQube",
+        title: "Sonar",
         url: "https://www.sonarqube.org/",
       },
       {
