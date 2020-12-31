@@ -1,0 +1,13 @@
+.stack-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-block-container {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
