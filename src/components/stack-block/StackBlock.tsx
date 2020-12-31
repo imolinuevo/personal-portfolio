@@ -1,13 +1,8 @@
 import React from "react";
 import "./StackBlock.css";
+import { ITechContainer } from "./tech-container/ITechContainer";
 import TechContainer from "./tech-container/TechContainer";
-
-const techContainers = [
-  "Front end",
-  "Back end",
-  "Databases",
-  "Development tools",
-];
+import techTypes from "./techTypes";
 
 const StackBlock = () => {
   return (
@@ -16,8 +11,12 @@ const StackBlock = () => {
         <h2>Software Stack</h2>
       </div>
       <div className="tech-block-container">
-        {techContainers.map((techContainer) => (
-          <TechContainer key={techContainer} containerName={techContainer} />
+        {techTypes.map((techContainer: ITechContainer) => (
+          <TechContainer
+            key={techContainer.groupName}
+            containerName={techContainer.groupName}
+            containerIcons={techContainer.groupIcons}
+          />
         ))}
       </div>
     </div>
