@@ -12,6 +12,9 @@ const techContainers = [
 const StackBlock = () => {
   return (
     <div className="main-block stack-block" id="stack">
+      <div className="block-title">
+        <h2>Software Stack</h2>
+      </div>
       <div className="tech-block-container">
         {techContainers.map((techContainer) => (
           <TechContainer key={techContainer} containerName={techContainer} />
