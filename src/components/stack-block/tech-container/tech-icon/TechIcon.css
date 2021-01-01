@@ -1,6 +1,29 @@
 .tech-icon {
-  background-color: salmon;
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tech-icon img {
+  width: 75px;
+  height: 75px;
+}
+
+.tech-icon span {
+  font-weight: 300;
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 800px) {
+  .tech-icon {
+    margin: 5px;
+  }
+  .tech-icon span {
+    display: none;
+  }
+  .tech-icon img {
+    width: 50px;
+    height: 50px;
+  }
 }

@@ -5,7 +5,16 @@ import "./TechIcon.css";
 const TechIcon = (props: { icon: ITechIcon }) => {
   return (
     <div className="tech-icon">
-      <span>Icon</span>
+      <a href={props.icon.url} target="_blank" rel="noreferrer">
+        <img
+          src={
+            require(`./icons/${props.icon.title.toLocaleLowerCase()}.png`)
+              .default
+          }
+          alt={props.icon.title}
+        />
+      </a>
+      <span>{props.icon.title}</span>
     </div>
   );
 };
