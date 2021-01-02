@@ -17,8 +17,8 @@ const LandingBlock = () => {
             I'm <span>Iñigo</span> Molinuevo
           </h1>
           <p>
-            In my portfolio you can find information about my software stack and
-            personal projects.
+            This is my handcrafted full stack developer portfolio where you can
+            find information about my software stack and personal projects.
           </p>
           <div className="button-container">
             <a href="#stack">
