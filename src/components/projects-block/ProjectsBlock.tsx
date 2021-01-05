@@ -5,8 +5,19 @@ import { ReactComponent as RightNavigationIcon } from "./navigation-icons/right-
 import projectList from "./projectList";
 
 const ProjectsBlock = () => {
-  const [projects, setProjects] = useState(projectList);
-  const [activeProject, setActiveProject] = useState(projects[0]);
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+
+  const shiftProjectRight = () => {
+    setActiveProjectIndex(
+      activeProjectIndex === projectList.length - 1 ? 0 : activeProjectIndex + 1
+    );
+  };
+
+  const shiftProjectLeft = () => {
+    setActiveProjectIndex(
+      activeProjectIndex === 0 ? projectList.length - 1 : activeProjectIndex - 1
+    );
+  };
 
   return (
     <div className="main-block projects-block" id="projects">
@@ -18,31 +29,32 @@ const ProjectsBlock = () => {
           <div className="image-container">
             <img
               src={
-                require(`./snapshots/${activeProject.title.toLocaleLowerCase()}.png`)
-                  .default
+                require(`./snapshots/${projectList[
+                  activeProjectIndex
+                ].title.toLocaleLowerCase()}.png`).default
               }
-              alt={activeProject.title}
+              alt={projectList[activeProjectIndex].title}
             />
           </div>
           <div className="project-description-container">
             <div className="left-nav">
-              <LeftNavigationIcon />
+              <LeftNavigationIcon onClick={shiftProjectLeft} />
             </div>
             <div className="text-container">
               <h4 className="project-description-title">
-                {activeProject.title}
+                {projectList[activeProjectIndex].title}
               </h4>
               <p className="project-description-text">
-                {activeProject.description}
+                {projectList[activeProjectIndex].description}
               </p>
               <p className="project-description-tags">
-                {activeProject.tags.map((tag) => (
+                {projectList[activeProjectIndex].tags.map((tag) => (
                   <span key={tag}>{tag}</span>
                 ))}
               </p>
             </div>
             <div className="right-nav">
-              <RightNavigationIcon />
+              <RightNavigationIcon onClick={shiftProjectRight} />
             </div>
           </div>
         </div>
