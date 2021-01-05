@@ -27,14 +27,24 @@ const ProjectsBlock = () => {
       <div className="carousel">
         <div className="project-container">
           <div className="image-container">
-            <img
-              src={
-                require(`./snapshots/${projectList[
-                  activeProjectIndex
-                ].title.toLocaleLowerCase()}.png`).default
-              }
-              alt={projectList[activeProjectIndex].title}
-            />
+            <a
+              href={`https://github.com/imolinuevo/${projectList[
+                activeProjectIndex
+              ].title
+                .replace(/ /g, "-")
+                .toLocaleLowerCase()}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={
+                  require(`./snapshots/${projectList[activeProjectIndex].title
+                    .replace(/ /g, "-")
+                    .toLocaleLowerCase()}.png`).default
+                }
+                alt={projectList[activeProjectIndex].title}
+              />
+            </a>
           </div>
           <div className="project-description-container">
             <div className="left-nav">
