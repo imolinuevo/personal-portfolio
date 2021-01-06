@@ -99,7 +99,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .carousel .project-container .image-container {
+  .carousel .project-container .image-container a {
     height: 50vh;
   }
   .carousel .project-container .project-description-container {
