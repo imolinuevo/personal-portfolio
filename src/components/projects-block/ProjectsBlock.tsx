@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useMediaPredicate } from "react-media-hook";
 import "./ProjectsBlock.css";
 import { ReactComponent as LeftNavigationIcon } from "./navigation-icons/left-navigation-icon.svg";
 import { ReactComponent as RightNavigationIcon } from "./navigation-icons/right-navigation-icon.svg";
 import projectList from "./projectList";
 
 const ProjectsBlock = () => {
+  const isDesktopSize: boolean = useMediaPredicate("(min-width: 600px)");
+
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
 
   const shiftProjectRight = () => {
@@ -40,7 +43,8 @@ const ProjectsBlock = () => {
                 src={
                   require(`./snapshots/${projectList[activeProjectIndex].title
                     .replace(/ /g, "-")
-                    .toLocaleLowerCase()}.png`).default
+                    .toLocaleLowerCase()}${isDesktopSize ? "" : "-mini"}.png`)
+                    .default
                 }
                 alt={projectList[activeProjectIndex].title}
               />
