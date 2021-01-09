@@ -11,9 +11,10 @@
 
 .carousel .left-nav,
 .right-nav {
-  width: 15%;
+  width: 10%;
   display: flex;
   align-items: flex-end;
+  transform: translateY(-12.5vh);
 }
 
 .carousel .left-nav {
@@ -103,7 +104,11 @@
     height: 50vh;
   }
   .carousel .project-container .project-description-container {
+    border-top: 1px solid #e0e0e0;
     height: 40vh;
+  }
+  .carousel .project-description-container .text-container {
+    height: 35vh;
   }
   .carousel .image-container svg {
     margin: 0;
@@ -116,6 +121,7 @@
   }
   .carousel .left-nav,
   .right-nav {
+    width: 20%;
     transform: translateY(-20vh);
   }
   .carousel .project-container .image-container img {
