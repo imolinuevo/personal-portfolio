@@ -9,17 +9,22 @@ const ProjectsBlock = () => {
   const isDesktopSize: boolean = useMediaPredicate("(min-width: 600px)");
 
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  const [fadingStatus, setFadingStatus] = useState("fade-in");
 
-  const shiftProjectRight = () => {
-    setActiveProjectIndex(
-      activeProjectIndex === projectList.length - 1 ? 0 : activeProjectIndex + 1
-    );
-  };
-
-  const shiftProjectLeft = () => {
-    setActiveProjectIndex(
-      activeProjectIndex === 0 ? projectList.length - 1 : activeProjectIndex - 1
-    );
+  const shiftProject = (direction: string) => {
+    setFadingStatus("fade-out");
+    setTimeout(() => {
+      setFadingStatus("fade-in");
+      setActiveProjectIndex(
+        direction === "right"
+          ? activeProjectIndex === projectList.length - 1
+            ? 0
+            : activeProjectIndex + 1
+          : activeProjectIndex === 0
+          ? projectList.length - 1
+          : activeProjectIndex - 1
+      );
+    }, 500);
   };
 
   return (
@@ -29,7 +34,7 @@ const ProjectsBlock = () => {
       </div>
       <div className="carousel">
         <div className="project-container">
-          <div className="image-container">
+          <div className={`image-container ${fadingStatus}`}>
             <a
               href={`https://github.com/imolinuevo/${projectList[
                 activeProjectIndex
@@ -51,10 +56,10 @@ const ProjectsBlock = () => {
             </a>
           </div>
           <div className="project-description-container">
-            <div className="left-nav" onClick={shiftProjectLeft}>
+            <div className="left-nav" onClick={() => shiftProject("left")}>
               <LeftNavigationIcon />
             </div>
-            <div className="text-container">
+            <div className={`text-container ${fadingStatus}`}>
               <h4 className="project-description-title">
                 {projectList[activeProjectIndex].title}
               </h4>
@@ -67,7 +72,7 @@ const ProjectsBlock = () => {
                 ))}
               </p>
             </div>
-            <div className="right-nav" onClick={shiftProjectRight}>
+            <div className="right-nav" onClick={() => shiftProject("right")}>
               <RightNavigationIcon />
             </div>
           </div>
