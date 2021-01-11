@@ -51,8 +51,8 @@ const ProjectsBlock = () => {
             </a>
           </div>
           <div className="project-description-container">
-            <div className="left-nav">
-              <LeftNavigationIcon onClick={shiftProjectLeft} />
+            <div className="left-nav" onClick={shiftProjectLeft}>
+              <LeftNavigationIcon />
             </div>
             <div className="text-container">
               <h4 className="project-description-title">
@@ -67,8 +67,8 @@ const ProjectsBlock = () => {
                 ))}
               </p>
             </div>
-            <div className="right-nav">
-              <RightNavigationIcon onClick={shiftProjectRight} />
+            <div className="right-nav" onClick={shiftProjectRight}>
+              <RightNavigationIcon />
             </div>
           </div>
         </div>

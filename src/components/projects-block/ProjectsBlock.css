@@ -10,11 +10,17 @@
 }
 
 .carousel .left-nav,
-.right-nav {
+.carousel .right-nav {
   width: 10%;
-  display: flex;
-  align-items: flex-end;
-  transform: translateY(-12.5vh);
+  transition: transform 0.2s;
+  transform-origin: center;
+  transform-box: fill-box;
+  cursor: pointer;
+}
+
+.carousel .left-nav:hover,
+.carousel .right-nav:hover {
+  transform: scaleY(1.2);
 }
 
 .carousel .left-nav {
@@ -120,9 +126,13 @@
     border-radius: 5px;
   }
   .carousel .left-nav,
-  .right-nav {
+  .carousel .right-nav {
     width: 20%;
     transform: translateY(-20vh);
+  }
+  .carousel .left-nav:hover,
+  .carousel .right-nav:hover {
+    transform: translateY(-20vh) scaleY(1.2);
   }
   .carousel .project-container .image-container img {
     width: 100%;
