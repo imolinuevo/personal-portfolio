@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useMediaPredicate } from "react-media-hook";
 import "./ProjectsBlock.css";
 import { ReactComponent as LeftNavigationIcon } from "./navigation-icons/left-navigation-icon.svg";
@@ -59,9 +59,9 @@ const ProjectsBlock = () => {
     }, 500);
   };
 
-  useEffect(() => {
+  const imageLoaded = () => {
     setFadingStatus("fade-in");
-  }, [activeProjectIndex]);
+  };
 
   return (
     <div className="main-block projects-block" id="projects">
@@ -88,6 +88,7 @@ const ProjectsBlock = () => {
                     .default
                 }
                 alt={projectList[activeProjectIndex].title}
+                onLoad={imageLoaded}
               />
             </a>
           </div>
