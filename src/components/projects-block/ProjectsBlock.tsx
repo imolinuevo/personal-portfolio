@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useMediaPredicate } from "react-media-hook";
 import "./ProjectsBlock.css";
 import { ReactComponent as LeftNavigationIcon } from "./navigation-icons/left-navigation-icon.svg";
@@ -47,7 +47,6 @@ const ProjectsBlock = () => {
   const shiftProject = (direction: string) => {
     setFadingStatus("fade-out");
     setTimeout(() => {
-      setFadingStatus("fade-in");
       setActiveProjectIndex(
         direction === "right"
           ? activeProjectIndex === projectList.length - 1
@@ -59,6 +58,10 @@ const ProjectsBlock = () => {
       );
     }, 500);
   };
+
+  useEffect(() => {
+    setFadingStatus("fade-in");
+  }, [activeProjectIndex]);
 
   return (
     <div className="main-block projects-block" id="projects">
