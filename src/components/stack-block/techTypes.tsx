@@ -125,12 +125,12 @@ const techOptions: ITechContainer[] = [
         url: "https://www.sonarqube.org/",
       },
       {
-        title: "Webpack",
-        url: "https://webpack.js.org/",
+        title: "AzureDevOps",
+        url: "https://azure.microsoft.com/en-us/services/devops/",
       },
       {
-        title: "AWS",
-        url: "https://aws.amazon.com/",
+        title: "Azure",
+        url: "https://azure.microsoft.com/en-us/",
       },
     ],
   },
